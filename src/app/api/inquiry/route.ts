@@ -35,7 +35,8 @@ export async function POST(request: Request) {
     const WEBHOOK_URL = process.env.WEBHOOK_URL || "";
 
     // Send email via Resend
-    const { error } = await resend.emails.send({
+    console.log("Sending email via Resend...", { from: FROM_EMAIL, to: TO_EMAIL });
+    const { data, error } = await resend.emails.send({
       from: FROM_EMAIL,
       to: TO_EMAIL,
       replyTo: email,
@@ -52,12 +53,14 @@ export async function POST(request: Request) {
     });
 
     if (error) {
-      console.error("Resend error:", error);
+      console.error("Resend error:", JSON.stringify(error));
       return NextResponse.json(
         { error: "Failed to send message. Please try again." },
         { status: 500 }
       );
     }
+
+    console.log("Email sent successfully:", data);
 
     // Optional webhook (Zapier, CRM, etc.)
     if (WEBHOOK_URL) {
