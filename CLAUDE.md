@@ -14,7 +14,7 @@ Next.js site for "It's an Art Party" — a mobile art and paint party business f
 - **Fonts:** Chewy (display) + Lato (body) via `next/font/google`
 - **Images:** `next/image` for optimization, served from `public/images/`
 - **Hosting:** Vercel (auto-deploys on push to `main`)
-- **Forms:** Contact form API route at `/api/inquiry` (Resend integration pending)
+- **Forms:** Contact form via Resend (`/api/inquiry`) with optional webhook support
 
 ## Development Commands
 
@@ -89,7 +89,6 @@ Colors, fonts, spacing, and custom components (`.btn-chunky`, `.blob`, `.paint-d
 
 ## Pending
 
-- Resend SDK integration for contact form (`/api/inquiry` has a TODO)
 - Social media links in footer are `#` placeholders (same as live WP site)
 
 ## Git & Deployment
