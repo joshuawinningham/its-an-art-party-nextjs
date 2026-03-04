@@ -31,7 +31,7 @@ export async function POST(request: Request) {
 
     const resend = new Resend(process.env.RESEND_API_KEY);
     const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "robin@itsanartparty.com";
-    const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || "It's an Art Party <onboarding@resend.dev>";
+    const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || "It's an Art Party <noreply@itsanartparty.com>";
     const WEBHOOK_URL = process.env.WEBHOOK_URL || "";
 
     // Send email via Resend
