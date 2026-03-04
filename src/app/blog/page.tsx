@@ -7,7 +7,12 @@ import { getAllPosts } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Tips, ideas, and inspiration for art parties, paint nights, and creative projects for kids in Charlotte, NC.",
+    "Tips and ideas for kids art projects, paint parties, and creative activities from It's an Art Party in Charlotte, NC.",
+  openGraph: {
+    title: "Blog | It's an Art Party",
+    description:
+      "Tips and ideas for kids art projects, paint parties, and creative activities from It's an Art Party in Charlotte, NC.",
+  },
 };
 
 export default function BlogPage() {

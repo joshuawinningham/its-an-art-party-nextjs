@@ -5,9 +5,14 @@ import PageHero from "@/components/sections/PageHero";
 import Cta from "@/components/sections/Cta";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About It's an Art Party | Charlotte NC Kids Art",
   description:
     "Meet Robin, the artist behind It's an Art Party. Bringing creative paint parties and art lessons to kids in Charlotte, NC since 2016.",
+  openGraph: {
+    title: "About It's an Art Party | Charlotte NC Kids Art",
+    description:
+      "Meet Robin, the artist behind It's an Art Party. Bringing creative paint parties and art lessons to kids in Charlotte, NC since 2016.",
+  },
 };
 
 const whyFeatures = [

@@ -3,9 +3,14 @@ import PageHero from "@/components/sections/PageHero";
 import Cta from "@/components/sections/Cta";
 
 export const metadata: Metadata = {
-  title: "Art Lessons",
+  title: "Kids Art Lessons | It's an Art Party Charlotte NC",
   description:
     "Fun art lessons for kids in Charlotte, NC. Small group and private instruction with professional artist. All supplies included.",
+  openGraph: {
+    title: "Kids Art Lessons | It's an Art Party Charlotte NC",
+    description:
+      "Fun art lessons for kids in Charlotte, NC. Small group and private instruction with professional artist. All supplies included.",
+  },
 };
 
 const features = [

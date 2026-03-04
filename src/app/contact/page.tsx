@@ -3,9 +3,14 @@ import PageHero from "@/components/sections/PageHero";
 import Contact from "@/components/sections/Contact";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact Us | It's an Art Party Charlotte NC",
   description:
-    "Contact It's an Art Party to book your kids birthday party or art lesson in Charlotte, NC. Call 980-253-4829 or fill out our form.",
+    "Get in touch with It's an Art Party to book a kids paint party or art lesson in Charlotte, NC. Call 980-253-4829 or fill out our contact form.",
+  openGraph: {
+    title: "Contact Us | It's an Art Party Charlotte NC",
+    description:
+      "Get in touch with It's an Art Party to book a kids paint party or art lesson in Charlotte, NC. Call 980-253-4829 or fill out our contact form.",
+  },
 };
 
 export default function ContactPage() {

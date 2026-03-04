@@ -3,9 +3,14 @@ import PageHero from "@/components/sections/PageHero";
 import Cta from "@/components/sections/Cta";
 
 export const metadata: Metadata = {
-  title: "Kids Birthday Parties",
+  title: "Kids Birthday Paint Parties | It's an Art Party Charlotte NC",
   description:
     "Book a mobile paint party for your child's birthday! We bring all the art supplies to your home in Charlotte, NC. Custom canvas designs for every theme.",
+  openGraph: {
+    title: "Kids Birthday Paint Parties | It's an Art Party Charlotte NC",
+    description:
+      "Book a mobile paint party for your child's birthday! We bring all the art supplies to your home in Charlotte, NC. Custom canvas designs for every theme.",
+  },
 };
 
 const features = [
