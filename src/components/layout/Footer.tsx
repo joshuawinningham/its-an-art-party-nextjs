@@ -87,15 +87,15 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} It&apos;s an Art Party. All rights reserved.
             </span>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-              <Link href="/blog/how-to-host-your-own-paint-party" className="text-white/40 hover:text-gold transition-colors duration-300">
+              <Link href="/how-to-host-your-own-paint-party" className="text-white/40 hover:text-gold transition-colors duration-300">
                 How to Host Your Own Paint Party
               </Link>
               <span className="text-white/20">|</span>
-              <Link href="/blog/how-to-start-a-paint-party-business" className="text-white/40 hover:text-gold transition-colors duration-300">
+              <Link href="/how-to-start-a-paint-party-business" className="text-white/40 hover:text-gold transition-colors duration-300">
                 How to Start a Paint Party Business
               </Link>
               <span className="text-white/20">|</span>
-              <Link href="/blog/homeschool-art-projects" className="text-white/40 hover:text-gold transition-colors duration-300">
+              <Link href="/homeschool-art-projects" className="text-white/40 hover:text-gold transition-colors duration-300">
                 Homeschool Art Project Ideas
               </Link>
             </div>

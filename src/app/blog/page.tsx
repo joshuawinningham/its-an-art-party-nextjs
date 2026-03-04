@@ -62,11 +62,11 @@ export default function BlogPage() {
                       </span>
                     </div>
                     <h2 className="font-display text-dark text-2xl md:text-3xl uppercase hover:text-pink transition-colors">
-                      <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                      <Link href={`/${post.slug}`}>{post.title}</Link>
                     </h2>
                     <p className="text-muted mt-3 leading-relaxed">{post.excerpt}</p>
                     <Link
-                      href={`/blog/${post.slug}`}
+                      href={`/${post.slug}`}
                       className="text-teal font-bold text-sm mt-4 hover:text-teal-dark transition-colors inline-block"
                     >
                       Read More &rarr;

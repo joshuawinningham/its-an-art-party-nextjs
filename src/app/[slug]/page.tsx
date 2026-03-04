@@ -151,7 +151,7 @@ export default async function BlogPostPage({ params }: Props) {
                       })}
                     </time>
                     <h3 className="font-display text-dark text-xl uppercase mt-2 hover:text-pink transition-colors">
-                      <Link href={`/blog/${relPost.slug}`}>{relPost.title}</Link>
+                      <Link href={`/${relPost.slug}`}>{relPost.title}</Link>
                     </h3>
                     <p className="text-muted text-sm mt-2 leading-relaxed">{relPost.excerpt}</p>
                   </div>
