@@ -1,26 +1,385 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* =================================================================
+   THEME TOKENS (Tailwind v4)
+   ================================================================= */
+
+@theme {
+  --color-pink: #ea5283;
+  --color-pink-dark: #d63d6e;
+  --color-pink-light: #fdf2f6;
+  --color-teal: #4ecdc4;
+  --color-teal-dark: #3bb5ad;
+  --color-teal-light: #f0faf9;
+  --color-gold: #f7b731;
+  --color-gold-dark: #e5a320;
+  --color-gold-light: #fef9ed;
+  --color-dark: #333333;
+  --color-body: #495565;
+  --color-muted: #697282;
+  --color-light-gray: #99a1ae;
+  --color-bg-light: #f8fafb;
+  --color-bg-gray: #f2f4f6;
+  --color-overlay-pink: #d9739f;
+  --color-navy: #101727;
+  --color-cream: #fffbf0;
+  --color-warm-white: #fefdfb;
+  --color-soft-gray: #f6f5f3;
+
+  --font-display: "Chewy", cursive;
+  --font-body: "Lato", sans-serif;
+
+  --max-width-content: 800px;
+  --max-width-wide: 1200px;
+
+  --animate-blob-morph: blobMorph 8s ease-in-out infinite;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* =================================================================
+   BASE STYLES
+   ================================================================= */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply font-body text-body overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+
+  a {
+    @apply no-underline text-inherit;
+  }
+
+  ul, ol {
+    @apply list-none m-0 p-0;
+  }
+
+  #about .space-y-5 a {
+    @apply text-teal font-bold;
+    background-image: linear-gradient(120deg, #f7b731 0%, #f7b731 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 6px;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+  }
+
+  #about .space-y-5 a:hover {
+    background-size: 100% 100%;
+  }
+
+  .entry-content ul {
+    @apply list-disc ml-6 mb-6;
+  }
+
+  .entry-content ol {
+    @apply list-decimal ml-6 mb-6;
+  }
+
+  button {
+    @apply bg-transparent border-0 cursor-pointer;
+  }
+
+  img {
+    @apply max-w-full h-auto;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* =================================================================
+   COMPONENTS
+   ================================================================= */
+
+@layer components {
+  /* ===== Chunky Button ===== */
+  .btn-chunky {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 16px 40px;
+    border-radius: 9999px;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.15), 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .btn-chunky:hover {
+    top: -3px;
+    box-shadow: 0 9px 0 rgba(0, 0, 0, 0.15), 0 12px 35px rgba(0, 0, 0, 0.15);
+  }
+  .btn-chunky:active {
+    top: 3px;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.15), 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* =================================================================
+   PAINT DRIP SHAPES
+   ================================================================= */
+
+.paint-drip-pink,
+.paint-drip-teal,
+.paint-drip-gold {
+  position: absolute;
+  bottom: -40px;
+  width: 60px;
+  border-radius: 0 0 50% 50%;
+  z-index: 20;
+  pointer-events: none;
+}
+.paint-drip-pink { background: #ea5283; }
+.paint-drip-teal { background: #4ecdc4; }
+.paint-drip-gold { background: #f7b731; }
+
+/* =================================================================
+   BLOB SHAPES
+   ================================================================= */
+
+.blob {
+  position: absolute;
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+  pointer-events: none;
+  z-index: 0;
+}
+.blob-animate {
+  animation: blobMorph 8s ease-in-out infinite;
+}
+@keyframes blobMorph {
+  0%, 100% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; }
+  25% { border-radius: 58% 42% 30% 70% / 55% 45% 45% 55%; }
+  50% { border-radius: 30% 70% 42% 58% / 45% 55% 55% 45%; }
+  75% { border-radius: 70% 30% 58% 42% / 55% 55% 45% 45%; }
+}
+
+/* =================================================================
+   WAVY NAV DIVIDER
+   ================================================================= */
+
+.nav-wave {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  z-index: 40;
+}
+
+/* =================================================================
+   POLAROID STYLE
+   ================================================================= */
+
+.polaroid {
+  background: white;
+  padding: 12px 12px 48px 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: rotate(var(--rotation, -2deg));
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.04);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* =================================================================
+   TAPE EFFECT
+   ================================================================= */
+
+.tape {
+  position: absolute;
+  width: 80px;
+  height: 28px;
+  background: rgba(247, 183, 49, 0.55);
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%) rotate(var(--tape-rotation, -3deg));
+  z-index: 10;
+  backdrop-filter: blur(1px);
+}
+
+/* =================================================================
+   TILTED CARDS
+   ================================================================= */
+
+.tilt-left { transform: rotate(-2deg); }
+.tilt-right { transform: rotate(2deg); }
+.tilt-left:hover, .tilt-right:hover { transform: rotate(0deg) translateY(-8px); }
+
+/* =================================================================
+   MASONRY GALLERY
+   ================================================================= */
+
+.masonry {
+  columns: 2;
+  column-gap: 16px;
+}
+@media (min-width: 768px) {
+  .masonry { columns: 3; column-gap: 20px; }
+}
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .masonry-item { margin-bottom: 20px; }
+}
+
+/* =================================================================
+   SCROLL ANIMATIONS
+   ================================================================= */
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animate-on-scroll.animate-fade-in {
+  transform: none;
+}
+.animate-on-scroll.animate-fade-in.is-visible {
+  opacity: 1;
+}
+.animate-on-scroll.animate-scale-in {
+  transform: scale(0.9) rotate(-2deg);
+}
+.animate-on-scroll.animate-scale-in.is-visible {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+/* Stagger delays */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+.delay-600 { transition-delay: 0.6s; }
+
+/* =================================================================
+   ROTATING WORD
+   ================================================================= */
+
+.rotating-word {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  display: inline-block;
+}
+.rotating-word.fade-out {
+  opacity: 0;
+  transform: translateY(20px) rotate(-3deg);
+}
+
+/* =================================================================
+   SPLATTER DOT PSEUDO
+   ================================================================= */
+
+.splatter-dot::before,
+.splatter-dot::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* =================================================================
+   PIN (pricing cards)
+   ================================================================= */
+
+.pin {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  background: radial-gradient(circle at 40% 35%, #ff6b6b, #c0392b);
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+.pin::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+}
+
+/* =================================================================
+   SPECKLE TEXTURE
+   ================================================================= */
+
+.speckle-bg {
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* =================================================================
+   FUN UNDERLINE
+   ================================================================= */
+
+.fun-underline {
+  text-decoration: none;
+  background-image: linear-gradient(120deg, #f7b731 0%, #f7b731 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 6px;
+  background-position: 0 88%;
+  transition: background-size 0.3s ease;
+}
+.fun-underline:hover {
+  background-size: 100% 100%;
+}
+
+/* =================================================================
+   MOBILE MENU ANIMATION
+   ================================================================= */
+
+.mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.mobile-menu.open {
+  max-height: 400px;
+}
+
+/* =================================================================
+   TEXT SHADOWS
+   ================================================================= */
+
+.text-shadow-soft {
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* =================================================================
+   SCALE OVERRIDES
+   ================================================================= */
+
+.scale-110 {
+  --tw-scale-x: 110% !important;
+  --tw-scale-y: 110% !important;
+  scale: var(--tw-scale-x) var(--tw-scale-y) !important;
+}
+
+.scale-125 {
+  --tw-scale-x: 125% !important;
+  --tw-scale-y: 125% !important;
+  scale: var(--tw-scale-x) var(--tw-scale-y) !important;
+}
+
+.group-hover\:scale-125:is(:where(.group):hover *) {
+  --tw-scale-x: 125% !important;
+  --tw-scale-y: 125% !important;
+  scale: var(--tw-scale-x) var(--tw-scale-y) !important;
 }
