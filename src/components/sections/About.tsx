@@ -80,7 +80,7 @@ export default function About() {
                 Art Lessons
               </h3>
               <p className="text-white/90 text-lg leading-relaxed mt-4 max-w-3xl">
-                I also offer options for art lessons in small groups for ages 4 and up. Provide your
+                I also offer options for <Link href="/art-lessons" className="text-pink font-bold fun-underline" style={{ backgroundImage: "linear-gradient(120deg, #fff, #fff)" }}>art lessons</Link> in small groups for ages 4 and up. Provide your
                 kids with a creative outlet through one-on-one instruction and encouragement. Art
                 provides many developmental benefits and may even improve academic performance.
               </p>

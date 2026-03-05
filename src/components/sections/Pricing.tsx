@@ -17,7 +17,7 @@ const plans = [
       "Ages 6 and up",
       "Various mediums available",
     ],
-    buttonText: "Read More",
+    buttonText: "Book Art Lessons",
     buttonUrl: "/contact",
   },
   {
@@ -36,7 +36,7 @@ const plans = [
       "Supplies included",
       "Instructor led step-by-step",
     ],
-    buttonText: "Read More",
+    buttonText: "Book Mobile Party",
     buttonUrl: "/contact",
   },
   {
@@ -55,7 +55,7 @@ const plans = [
       "Supplies included",
       "Instruction sheet provided",
     ],
-    buttonText: "Read More",
+    buttonText: "Book DIY Party",
     buttonUrl: "/contact",
   },
 ];

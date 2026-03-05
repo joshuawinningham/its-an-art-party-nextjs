@@ -12,6 +12,7 @@ const parties = [
     description:
       "Art parties are messy! Let us handle the prep and clean up of the party area inside your home or venue.",
     btnColor: "bg-teal hover:bg-teal-dark text-white",
+    buttonText: "Book Indoor Party",
     tilt: "tilt-left",
     delay: "",
   },
@@ -25,6 +26,7 @@ const parties = [
     description:
       "Love the weather? We can set up our art stations outside! Perfect for spring and fall parties.",
     btnColor: "bg-pink hover:bg-pink-dark text-white",
+    buttonText: "Book Outdoor Party",
     tilt: "",
     delay: "delay-200",
   },
@@ -38,6 +40,7 @@ const parties = [
     description:
       "Have a creative theme? We can come up with custom paintings to match your theme! Just ask!",
     btnColor: "bg-gold hover:bg-gold-dark text-dark",
+    buttonText: "Book Theme Party",
     tilt: "tilt-right",
     delay: "delay-400",
   },
@@ -108,7 +111,7 @@ export default function PartyOptions() {
                     href="/contact"
                     className={`btn-chunky ${party.btnColor} text-sm mt-5 inline-block py-3 px-8`}
                   >
-                    Book Now
+                    {party.buttonText}
                   </Link>
                 </div>
               </div>
