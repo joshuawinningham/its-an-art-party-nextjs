@@ -13,6 +13,19 @@ export const metadata: Metadata = {
   },
 };
 
+const ideas = [
+  "Use vegetables, flowers, bubble wrap, string, shaving cream and more to create unique designs with paint.",
+  "\u201cPaint\u201d with chalk shavings or use a spray bottle filled with water or diluted paint.",
+  "Learn different techniques for using acrylic paint on surfaces like canvas, wood, and paper.",
+  "Paint a phrase, name, or initials for personalized wall art.",
+  "Learn to draw or paint still life images or portraits.",
+  "Create a collage with words that describe yourself.",
+  "Paint on stones or tree branches.",
+  "Printmaking using styrofoam templates on paper, card stock, or note cards.",
+  "Learn about color theory and experiment with painting using the color wheel.",
+  "Glue \u201codds and ends\u201d (mismatched puzzle pieces, buttons, bolts, boxes, etc.) to a board and spray paint everything the same color.",
+];
+
 const features = [
   "Individual Lessons: $45 (1 child)",
   "Group Lessons: $30 per child (up to 10 children)",
@@ -158,40 +171,18 @@ export default function ArtLessonsPage() {
           <h2 className="font-display text-teal text-4xl md:text-[52px] uppercase text-center mb-10">
             Ideas to Get You Started
           </h2>
-          <div className="prose prose-lg max-w-none">
-            <p>
-              These projects can be completed during art lessons, or even used for parties. The
-              possibilities are ENDLESS!
-            </p>
-            <ul>
-              <li>
-                Use vegetables, flowers, bubble wrap, string, shaving cream and more to create
-                unique designs with paint.
+          <p className="text-body text-lg leading-relaxed mb-8">
+            These projects can be completed during art lessons, or even used for parties. The
+            possibilities are ENDLESS!
+          </p>
+          <ul className="space-y-4">
+            {ideas.map((idea, i) => (
+              <li key={i} className="flex items-start gap-4">
+                <span className="bg-teal w-2 h-2 rounded-full shrink-0 mt-2.5" />
+                <span className="text-body text-lg leading-relaxed">{idea}</span>
               </li>
-              <li>
-                &ldquo;Paint&rdquo; with chalk shavings or use a spray bottle filled with water or
-                diluted paint.
-              </li>
-              <li>
-                Learn different techniques for using acrylic paint on surfaces like canvas, wood,
-                and paper.
-              </li>
-              <li>Paint a phrase, name, or initials for personalized wall art.</li>
-              <li>Learn to draw or paint still life images or portraits.</li>
-              <li>Create a collage with words that describe yourself.</li>
-              <li>Paint on stones or tree branches.</li>
-              <li>
-                Printmaking using styrofoam templates on paper, card stock, or note cards.
-              </li>
-              <li>
-                Learn about color theory and experiment with painting using the color wheel.
-              </li>
-              <li>
-                Glue &ldquo;odds and ends&rdquo; (mismatched puzzle pieces, buttons, bolts, boxes,
-                etc.) to a board and spray paint everything the same color.
-              </li>
-            </ul>
-          </div>
+            ))}
+          </ul>
         </div>
       </section>
 

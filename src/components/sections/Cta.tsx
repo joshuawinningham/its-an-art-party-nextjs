@@ -69,7 +69,7 @@ export default function Cta({
         {subtitle && <p className="text-white/90 text-lg mt-4">{subtitle}</p>}
         <p className="text-white/90 text-xl mt-5 font-bold">
           {phoneLabel}{" "}
-          <a href={`tel:${phoneDigits}`} className="fun-underline text-white">
+          <a href={`tel:${phoneDigits}`} className="fun-underline text-white" style={{ backgroundImage: "linear-gradient(120deg, #f7b731, #f7b731)" }}>
             {phone}
           </a>
         </p>

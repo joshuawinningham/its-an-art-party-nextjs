@@ -58,11 +58,11 @@
   }
 
   #about .space-y-5 a {
-    @apply text-teal font-bold;
-    background-image: linear-gradient(120deg, #f7b731 0%, #f7b731 100%);
+    @apply text-pink font-bold;
+    background-image: linear-gradient(120deg, #4ecdc4 0%, #4ecdc4 100%);
     background-repeat: no-repeat;
     background-size: 100% 6px;
-    background-position: 0 88%;
+    background-position: 0 96%;
     transition: background-size 0.25s ease-in;
   }
 
@@ -331,10 +331,10 @@
 
 .fun-underline {
   text-decoration: none;
-  background-image: linear-gradient(120deg, #f7b731 0%, #f7b731 100%);
+  background-image: linear-gradient(120deg, #4ecdc4 0%, #4ecdc4 100%);
   background-repeat: no-repeat;
   background-size: 100% 6px;
-  background-position: 0 88%;
+  background-position: 0 96%;
   transition: background-size 0.3s ease;
 }
 .fun-underline:hover {

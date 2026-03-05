@@ -158,14 +158,14 @@ export default function AboutPage() {
             <p>
               Through It&apos;s an Art Party, I want to help celebrate your special occasions by
               bringing art to you! Visit the{" "}
-              <Link href="/kids-birthdays/" className="text-teal font-bold underline decoration-gold/50 underline-offset-2">
+              <Link href="/kids-birthdays/" className="text-pink font-bold fun-underline">
                 kids painting parties page
               </Link>{" "}
               for project examples and pricing.
             </p>
             <p>
               I also offer art lessons for individuals or small groups. Find out more about{" "}
-              <Link href="/art-lessons/" className="text-teal font-bold underline decoration-gold/50 underline-offset-2">
+              <Link href="/art-lessons/" className="text-pink font-bold fun-underline">
                 art lessons here
               </Link>
               .

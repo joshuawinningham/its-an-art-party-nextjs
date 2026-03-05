@@ -46,7 +46,7 @@ export default async function BlogPostPage({ params }: Props) {
           className="blob blob-animate bg-gold/10 w-[200px] h-[200px] top-10 -right-10"
           style={{ animationDelay: "-3s" }}
         />
-        <div className="container mx-auto max-w-wide relative z-10">
+        <div className="container mx-auto max-w-wide relative z-10 text-center">
           <Link
             href="/blog"
             className="text-white/70 text-sm font-bold hover:text-white transition-colors mb-4 inline-block"
@@ -54,12 +54,19 @@ export default async function BlogPostPage({ params }: Props) {
             &larr; Back to Blog
           </Link>
           <h1
-            className="font-display text-4xl md:text-[56px] uppercase leading-tight max-w-4xl"
+            className="font-display text-4xl md:text-[56px] uppercase leading-tight max-w-4xl mx-auto"
             style={{ textShadow: "2px 2px 0 rgba(0,0,0,0.15)" }}
           >
             {post.title}
           </h1>
-          <div className="flex items-center gap-4 mt-4 text-white/70 text-sm">
+          <div className="flex items-center justify-center gap-4 mt-4 text-white/70 text-sm">
+            <Image
+              src="/images/robin-profile.jpeg"
+              alt="Robin Winningham"
+              width={48}
+              height={48}
+              className="w-12 h-12 rounded-full object-cover border-2 border-white/30"
+            />
             <time>
               {new Date(post.date).toLocaleDateString("en-US", {
                 year: "numeric",

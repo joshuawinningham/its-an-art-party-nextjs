@@ -28,7 +28,7 @@ export default function About() {
             <div className="mt-8 space-y-5 text-body text-xl leading-relaxed animate-on-scroll delay-200">
               <p>
                 It&apos;s an Art Party is a mobile art and paint party service! I specialize in{" "}
-                <strong className="text-pink">kids birthday parties</strong> including canvas
+                <Link href="/kids-birthdays" className="text-pink font-bold">kids birthday parties</Link> including canvas
                 painting and mixed media art projects for ages 4 and up. I bring the creativity to
                 you with all supplies included.
               </p>
@@ -38,7 +38,7 @@ export default function About() {
                 unforgettable memories.
               </p>
               <p>
-                <Link href="/contact" className="fun-underline text-teal font-bold">
+                <Link href="/contact" className="text-pink font-bold">
                   Contact me
                 </Link>{" "}
                 today to plan your next party!
