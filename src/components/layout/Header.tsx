@@ -100,7 +100,7 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden bg-teal-dark mobile-menu ${mobileOpen ? "open" : ""}`}>
+        <div className={`md:hidden bg-teal mobile-menu ${mobileOpen ? "open" : ""}`}>
           <div className="flex flex-col items-center gap-4 py-6">
             {navLinks.map((link) => (
               <Link
