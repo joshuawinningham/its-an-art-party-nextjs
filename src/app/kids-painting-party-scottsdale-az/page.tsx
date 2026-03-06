@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/sections/PageHero";
 export const metadata: Metadata = {
-  title: "Kids Paint Party Scottsdale AZ | Birthday Painting Parties",
+  title: "Kids Painting Party Scottsdale AZ | Birthday Painting Parties",
   description:
-    "Find the best kids paint party services in Scottsdale, AZ. Canvas painting parties for birthdays, playdates, and events — at a studio or at your location. All supplies included for ages 4 and up.",
+    "Find the best kids painting party services in Scottsdale, AZ. Canvas painting parties for birthdays, playdates, and events — at a studio or at your location. All supplies included for ages 4 and up.",
   openGraph: {
-    title: "Kids Paint Party Scottsdale AZ | Birthday Painting Parties",
+    title: "Kids Painting Party Scottsdale AZ | Birthday Painting Parties",
     description:
-      "Find the best kids paint party services in Scottsdale, AZ. Canvas painting parties for birthdays, playdates, and events — at a studio or at your location. All supplies included for ages 4 and up.",
+      "Find the best kids painting party services in Scottsdale, AZ. Canvas painting parties for birthdays, playdates, and events — at a studio or at your location. All supplies included for ages 4 and up.",
   },
 };
 
@@ -49,7 +49,7 @@ export default function KidsPaintPartyScottsdaleAZ() {
   return (
     <main>
       <PageHero
-        title="Kids Paint Parties in Scottsdale, AZ"
+        title="Kids Painting Parties in Scottsdale, AZ"
         quote="Every child is an artist. — Pablo Picasso"
         bgColor="bg-teal"
       />
@@ -61,7 +61,7 @@ export default function KidsPaintPartyScottsdaleAZ() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="prose prose-lg max-w-none animate-on-scroll">
               <p>
-                Looking for a kids paint party in Scottsdale, Arizona? Canvas painting parties are one
+                Looking for a kids painting party in Scottsdale, Arizona? Canvas painting parties are one
                 of the most popular ways to celebrate birthdays, playdates, and special events for
                 children ages 4 and up. Whether you visit a local art studio or book a mobile
                 provider who comes to you, all supplies are included so you can focus on the fun.
@@ -75,8 +75,8 @@ export default function KidsPaintPartyScottsdaleAZ() {
             </div>
             <div className="relative aspect-square w-full rounded-2xl overflow-hidden shadow-xl animate-on-scroll delay-200">
               <Image
-                src="/images/kids-paint-party-scottsdale-az.png"
-                alt="Kids Painty Party Scottsdale AZ"
+                src="/images/kids-painting-party-scottsdale-az.png"
+                alt="Kids Painting Party Scottsdale AZ"
                 fill
                 className="object-cover"
               />
@@ -224,7 +224,7 @@ export default function KidsPaintPartyScottsdaleAZ() {
             Scottsdale Paint Party Providers
           </h2>
           <p className="text-muted text-lg max-w-2xl mx-auto leading-relaxed">
-            Are you a kids paint party business in Scottsdale, AZ? Get listed here and connect with
+            Are you a kids painting party business in Scottsdale, AZ? Get listed here and connect with
             local families looking for painting party services. Contact us to learn more about
             being featured in our directory.
           </p>

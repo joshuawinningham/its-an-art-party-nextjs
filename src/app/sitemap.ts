@@ -49,7 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${siteUrl}/kids-paint-party-scottsdale-az/`,
+      url: `${siteUrl}/kids-painting-party-scottsdale-az/`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
