@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const directoryPrefixes = ["/kids-paint-party-"];
+const directoryPrefixes = ["/kids-paint-party-", "/kids-painting-party-"];
 
 export default function Footer() {
   const pathname = usePathname();
@@ -11,7 +11,7 @@ export default function Footer() {
 
   return (
     <footer className="relative overflow-hidden">
-      <div className="bg-dark pt-16 pb-8 relative">
+      <div className={`bg-dark ${isDirectoryPage ? "pb-0" : "pt-16 pb-8"} relative`}>
         {!isDirectoryPage && (
           <>
             <div className="blob blob-animate bg-teal/5 w-[300px] h-[300px] top-10 -right-20" />
